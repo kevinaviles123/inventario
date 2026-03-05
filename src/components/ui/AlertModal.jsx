@@ -74,7 +74,7 @@ const AlertModal = ({ alert, onClose }) => {
       >
         <button
           type="button"
-          onClick={closeAlert}
+          onClick={onClose}
           className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 focus:outline-none"
         >
           <span className="sr-only">Cerrar</span>✕
