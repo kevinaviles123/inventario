@@ -11,7 +11,7 @@ import {
 import { WAREHOUSES } from "../utils/constants";
 
 const Dashboard = () => {
-  const { products, categories, movements } = useInventory();
+  const { products, movements } = useInventory();
 
   const totalValue = products.reduce((sum, p) => sum + p.price * p.stock, 0);
   const lowStockCount = products.filter((p) => p.stock <= p.minStock).length;

@@ -92,25 +92,6 @@ const Register = () => {
     }
   };
 
-  const validateForm = () => {
-    const newErrors = {};
-
-    const nameErr = validateName(name);
-    if (nameErr) newErrors.name = nameErr;
-
-    const emailErr = validateEmail(email);
-    if (emailErr) newErrors.email = emailErr;
-
-    const pwdErr = validatePassword(password);
-    if (pwdErr) newErrors.password = pwdErr;
-
-    const confirmErr = validateConfirmPassword(confirmPassword, password);
-    if (confirmErr) newErrors.confirmPassword = confirmErr;
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setServerError("");
